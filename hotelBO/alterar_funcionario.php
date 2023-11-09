@@ -14,7 +14,7 @@ if (isset($_GET["id"])) {
         $nome_completo = $row["nome_completo"];
         $login = $row["login"];
     } else {
-        echo "Funcionário não encontrado.";
+        echo "Funcionário não foi encontrado.";
     }
 }
 
@@ -34,20 +34,23 @@ mysqli_close($conn);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Funcionário - Ocean Blue Hotel</title>
     <link rel="stylesheet" href="css/altfun.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="header">
-    <h1><a href="home.php">Ocean Blue Hotel</a></h1>
+        <h1><a href="home.php">Ocean Blue Hotel</a></h1>
         <p></p>
     </div>
     <div class="menu">
-    
+
     </div>
     <div class="content">
         <h2>Alterar Funcionário</h2>
@@ -60,9 +63,10 @@ mysqli_close($conn);
         </form>
     </div>
     <footer>
-     <div class="footer">
-      <p>© 2023 Copyright: Giovanna & Giovana</p>
-     </div>
-   </footer>
+        <div class="footer">
+        <p>© 2023 Copyright Ocean Blue</p>
+        </div>
+    </footer>
 </body>
+
 </html>

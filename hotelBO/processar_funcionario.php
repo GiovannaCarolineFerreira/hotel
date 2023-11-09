@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE funcionario SET nome_completo = '$nome_completo', login = '$login', senha = '$senha' WHERE id = $funcionario_id";
 
         if (mysqli_query($conn, $sql)) {
-            header("Location: funcionario.php"); 
+            header("Location: funcionario.php");
             exit();
         } else {
             echo "Erro ao atualizar o funcionário: " . mysqli_error($conn);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO funcionario (nome_completo, login, senha) VALUES ('$nome_completo', '$login', '$senha')";
 
         if (mysqli_query($conn, $sql)) {
-            header("Location: funcionario.php"); 
+            header("Location: funcionario.php");
             exit();
         } else {
             echo "Erro ao adicionar o funcionário: " . mysqli_error($conn);

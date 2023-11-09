@@ -21,7 +21,8 @@ CREATE TABLE cliente (
 CREATE TABLE quarto (
     numero INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(205),
-    preco DECIMAL(10, 2)
+    preco DECIMAL(10, 2),
+    FOREIGN KEY (descricao_tp_quarto) REFERENCES tipo_quarto(id)
 );
 
 -- Criação da tabela "tipo_quarto"
@@ -36,8 +37,11 @@ CREATE TABLE reserva (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tipo_quarto INT,
     nome_cliente INT,
+    preco_quarto DECIMAL(10, 2),
     data_entrada DATE,
     data_saida DATE,
+    forma_pagamento VARCHAR(205),
     FOREIGN KEY (tipo_quarto) REFERENCES tipo_quarto(id),
-    FOREIGN KEY (nome_cliente) REFERENCES cliente(id)
+    FOREIGN KEY (nome_cliente) REFERENCES cliente(id),
+    FOREIGN KEY (preco_quarto) REFERENCES quarto(id)
 );

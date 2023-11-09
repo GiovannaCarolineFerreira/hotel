@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO quarto (numero, nome, preco) VALUES ('$numero', '$nome', '$preco')";
 
         if (mysqli_query($conn, $sql)) {
-            header("Location: quarto.php"); 
+            header("Location: quarto.php");
             exit();
         } else {
             echo "Erro ao adicionar o quarto: " . mysqli_error($conn);

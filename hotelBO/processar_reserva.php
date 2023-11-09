@@ -1,15 +1,15 @@
 <?php
 include("db.php");
- 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tipo_quarto = $_POST["tipo_quarto"];
     $nome_cliente = $_POST["nome_cliente"];
-    $preco = $_POST["preco"];
-    $forma_pagamento = $_POST["forma_pagamento"];
     $data_entrada = $_POST["data_entrada"];
     $data_saida = $_POST["data_saida"];
-    $query = "INSERT INTO reserva (tipo_quarto, nome_cliente, preco, forma_pagamento, data_entrada, data_saida)
-              VALUES ($tipo_quarto, $nome_cliente, $preco, '$forma_pagamento', '$data_entrada', '$data_saida')";
+    $forma_pagamento = $_POST["forma_pagamento"];
+    $preco = $_POST["preco"];
+    $query = "INSERT INTO reserva (tipo_quarto, nome_cliente, data_entrada, data_saida forma_pagamento, preco)
+              VALUES ($tipo_quarto, $nome_cliente, , '$data_entrada', '$data_saida', '$forma_pagamento', '$preco')";
 
     if (mysqli_query($conn, $query)) {
         header("Location: reserva.php");

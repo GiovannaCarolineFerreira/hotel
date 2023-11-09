@@ -34,16 +34,19 @@ mysqli_close($conn);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Quarto - Ocean Blue Hotel</title>
     <link rel="stylesheet" href="css/altquarto.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="header">
-    <h1><a href="home.php">Ocean Blue Hotel</a></h1>
+        <h1><a href="home.php">Ocean Blue Hotel</a></h1>
         <p></p>
     </div>
     <div class="menu">
@@ -57,26 +60,27 @@ mysqli_close($conn);
             <input type="text" name="preco" value="<?php echo $preco; ?>" required>
             <label for="tipo_quarto">Tipo de Quarto:</label>
             <select name="tipo_quarto" required>
-              <?php
-               include("db.php");
-               $query = "SELECT * FROM tipo_quarto";
-               $result = mysqli_query($conn, $query);
-               if (mysqli_num_rows($result) > 0) {
-                  while ($row = mysqli_fetch_assoc($result)) {
-               $selected = ($row["id"] == $quarto["tipo_quarto"]) ? "selected" : "";
-                 echo "<option value='" . $row["id"] . "' " . $selected . ">" . $row["descricao"] . "</option>";
+                <?php
+                include("db.php");
+                $query = "SELECT * FROM tipo_quarto";
+                $result = mysqli_query($conn, $query);
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $selected = ($row["id"] == $quarto["tipo_quarto"]) ? "selected" : "";
+                        echo "<option value='" . $row["id"] . "' " . $selected . ">" . $row["descricao"] . "</option>";
+                    }
                 }
-               }
-               mysqli_close($conn);
-              ?>
+                mysqli_close($conn);
+                ?>
             </select>
             <button type="submit">Salvar Alterações</button>
         </form>
     </div>
     <footer>
-     <div class="footer">
-      <p>© 2023 Copyright: Giovanna & Giovana</p>
-     </div>
-   </footer>
+        <div class="footer">
+        <p>© 2023 Copyright Ocean Blue</p>
+        </div>
+    </footer>
 </body>
+
 </html>

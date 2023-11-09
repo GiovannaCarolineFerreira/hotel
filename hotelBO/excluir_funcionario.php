@@ -16,4 +16,3 @@ if (isset($_GET["id"])) {
     echo "ID do funcionário não especificado.";
 }
 ?>
-

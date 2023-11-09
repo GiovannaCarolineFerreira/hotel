@@ -9,12 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // verificando se o usuário logado é "admin" e a senha é "admin1234"
     if ($username === "admin" && $password === "admin1234") {
         $_SESSION["username"] = $username;
-        header("Location: home.php"); 
+        header("Location: home.php");
         exit();
     } else {
         // se não é inválidado
         $_SESSION["login_error"] = "Credenciais inválidas. Tente novamente.";
-        header("Location: login.php"); 
+        header("Location: login.php");
         exit();
     }
 }
