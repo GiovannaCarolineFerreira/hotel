@@ -13,8 +13,8 @@
 <body>
     <div class="header">
         <h1><a href="home.php">Ocean Blue Hotel</a></h1>
-
     </div>
+    <a href="/hotelbo/home.php">Go Back</a>
     <div class="menu">
     </div>
     <div class="content">

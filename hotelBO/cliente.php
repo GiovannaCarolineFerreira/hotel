@@ -19,6 +19,7 @@
         <p></p>
     </div>
     <div class="menu">
+    <a href="/hotelbo/home.php">Go Back</a>
 
     </div>
     <div class="content">

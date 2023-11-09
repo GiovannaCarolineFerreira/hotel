@@ -49,6 +49,7 @@ mysqli_close($conn);
         <h1><a href="home.php">Ocean Blue Hotel</a></h1>
         <p></p>
     </div>
+    <a href="/hotelbo/home.php">Go Back</a>
     <div class="menu">
 
     </div>
