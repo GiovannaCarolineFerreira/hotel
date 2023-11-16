@@ -3,6 +3,7 @@ body {
     background-color: #b9d2fa;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .container {
