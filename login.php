@@ -41,7 +41,7 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
         <label class="block text-gray-700 text-sm mb-2" for="password">
           Senha
         </label>
-        <input class="shadow-md appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="******************">
+        <input class="shadow-md appearance-none  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="******************">
       </div>
       <div class="flex items-center justify-between">
         <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-20" type="submit">
@@ -49,6 +49,7 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
         </button>
       </div>
     </form>
+    
     <p class="text-center text-black text-xs">
       &copy;2023 - Blue Ocean Hotel.
     </p>

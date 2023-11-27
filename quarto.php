@@ -46,7 +46,7 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
         </div>
     </nav>
 
-    <div class="content mt-64 shadow-lg">
+    <div class="content mt-24 shadow-lg">
         <h2 class="text-2xl font-bold mb-4">Quartos</h2>
         <div class="overflow-x-auto mx-auto">
             <table class="min-w-full bg-white border border-gray-300">

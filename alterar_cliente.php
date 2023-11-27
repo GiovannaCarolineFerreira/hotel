@@ -76,11 +76,7 @@ mysqli_close($conn);
             <button type="submit">Salvar Alterações</button>
         </form>
     </div>
-    <footer>
-        <div class="footer">
-        <p>© 2023 Copyright Ocean Blue</p>
-        </div>
-    </footer>
+ 
 </body>
 
 </html>
