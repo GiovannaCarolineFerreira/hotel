@@ -4,7 +4,6 @@ include("db.php");
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
 
-    // usando Query para excluir o cliente com o ID especificado
     $query = "DELETE FROM cliente WHERE id = $id";
 
     if (mysqli_query($conn, $query)) {
