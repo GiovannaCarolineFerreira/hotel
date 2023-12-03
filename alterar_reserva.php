@@ -20,6 +20,7 @@ if (isset($_GET["id"])) {
         $data_entrada = $row["data_entrada"];
         $data_saida = $row["data_saida"];
         $preco = $row["preco"];
+
     } else {
         echo "Reserva não encontrada.";
     }
