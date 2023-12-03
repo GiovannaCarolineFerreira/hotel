@@ -29,7 +29,14 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
         <label class="block text-gray-700 text-sm mb-2" for="password">
           <i class="fas fa-lock text-gray-500"></i> Senha
         </label>
-        <input class="shadow-md appearance-none rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="******************">
+        <div class="relative">
+          <input class="shadow-md appearance-none rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="******************">
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+            <button type="button" onclick="togglePasswordVisibility()" class="text-gray-500 focus:outline-none">
+              <i id="password-toggle" class="fas fa-eye-slash"></i>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="flex items-center justify-between">
         <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-20" type="submit">
@@ -37,6 +44,25 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
         </button>
       </div>
     </form>
+
+    <script>
+      function togglePasswordVisibility() {
+        var passwordInput = document.getElementById('password');
+        var passwordToggle = document.getElementById('password-toggle');
+
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          passwordToggle.className = 'fas fa-eye';
+        } else {
+          passwordInput.type = 'password';
+          passwordToggle.className = 'fas fa-eye-slash';
+        }
+      }
+    </script>
+  </div>
+</div>
+
+
     
     <p class="text-center text-black text-xs">
       &copy;2023 - Ocean Blue Hotel.

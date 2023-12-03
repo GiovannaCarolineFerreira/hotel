@@ -83,79 +83,76 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
     </div>
 </nav>
 
-    <div class="flex items-center justify-center flex-col h-screen">
-        <h1 class="mb-6 text-3xl font-bold">Adicionar Reserva:</h1>
-        <div class="w-full max-w-md">
-            <form action="adicionar_reserva.php" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-32" method="POST">
+<div class="flex items-center justify-center flex-col h-screen">
+    <h1 class="mb-6 text-3xl font-bold"><i class="fas fa-calendar-alt mr-4"> </i>Adicionar Reserva:</h1>
+    <div class="w-full max-w-md">
+        <form action="adicionar_reserva.php" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-32" method="POST">
 
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_quarto">
-                        Tipo de Quarto:
-                    </label>
-                    <select name="tipo_quarto" class="w-full p-2 border rounded" required>
-                        <?php
-                        while ($row = mysqli_fetch_assoc($result_tipos_quarto)) {
-                            echo "<option value='" . $row["id"] . "'>" . $row["descricao"] . "</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_quarto">
+                    <i class="fas fa-door-open"></i> Tipo de Quarto:
+                </label>
+                <select name="tipo_quarto" class="w-full p-2 border rounded" required>
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result_tipos_quarto)) {
+                        echo "<option value='" . $row["id"] . "'>" . $row["descricao"] . "</option>";
+                    }
+                    ?>
+                </select>
+            </div>
 
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nome_cliente">
-                        Nome do Cliente:
-                    </label>
-                    <select name="nome_cliente" class="w-full p-2 border rounded" required>
-                        <?php
-                        while ($row = mysqli_fetch_assoc($result_clientes)) {
-                            echo "<option value='" . $row["id"] . "'>" . $row["nome"] . "</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="nome_cliente">
+                    <i class="fas fa-user"></i> Nome do Cliente:
+                </label>
+                <select name="nome_cliente" class="w-full p-2 border rounded" required>
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result_clientes)) {
+                        echo "<option value='" . $row["id"] . "'>" . $row["nome"] . "</option>";
+                    }
+                    ?>
+                </select>
+            </div>
 
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="forma_pagamento">
-                        Forma de Pagamento:
-                    </label>
-                    <input type="text" name="forma_pagamento" class="w-full p-2 border rounded" required>
-                </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="forma_pagamento">
+                    <i class="fas fa-credit-card"></i> Forma de Pagamento:
+                </label>
+                <input type="text" name="forma_pagamento" class="w-full p-2 border rounded" required>
+            </div>
 
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="data_entrada">
-                        Data de Entrada:
-                    </label>
-                    <input type="date" name="data_entrada" class="w-full p-2 border rounded" required>
-                </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="data_entrada">
+                    <i class="fas fa-calendar-day"></i> Data de Entrada:
+                </label>
+                <input type="date" name="data_entrada" class="w-full p-2 border rounded" required>
+            </div>
 
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="data_saida">
-                        Data de Saída:
-                    </label>
-                    <input type="date" name="data_saida" class="w-full p-2 border rounded" required>
-                </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="data_saida">
+                    <i class="fas fa-calendar-day"></i> Data de Saída:
+                </label>
+                <input type="date" name="data_saida" class="w-full p-2 border rounded" required>
+            </div>
 
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="preco">
-                        Preço:
-                    </label>
-                    <input type="text" name="preco" class="w-full p-2 border rounded" required>
-                </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="preco">
+                    <i class="fas fa-dollar-sign"></i> Preço:
+                </label>
+                <input type="text" name="preco" class="w-full p-2 border rounded" required>
+            </div>
 
-                <div class="flex items-center justify-center mt-6">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                        Adicionar Reserva
-                    </button>
-                </div>
-            </form>
-        </div>
+            <div class="flex items-center justify-center mt-6">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    <i class="fas fa-plus-circle"></i> Adicionar Reserva
+                </button>
+            </div>
+        </form>
     </div>
+</div>
 
-    <footer class="fixed bottom-0 left-0 right-0 bg-white p-4 text-center">
-  <p class="text-gray-500 text-sm font-bold">
-    <i class="fas fa-hotel text-blue-500"></i> Hotel Blue Ocean - Todos os direitos reservados.
-  </p>
-</footer>
+
+   
 
 
     <script>

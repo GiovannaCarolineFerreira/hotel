@@ -52,44 +52,46 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
     </div>
 </nav>
 
-    <div class="flex items-center justify-center flex-col h-screen ">
-        <h1 class="mb-6 text-3xl font-bold">Adicionar Cliente:</h1>
-        <div class="w-full max-w-md">
-            <form action="processar_cliente.php" class="bg-white shadow-md rounded px-10 pt-8 pb-6 mb-32" method="POST">
+<div class="flex items-center justify-center flex-col h-screen ">
+    <h1 class="mb-6 text-3xl font-bold"><i class="fas fa-user mr-4"> </i>Adicionar Cliente:</h1>
+    <div class="w-full max-w-md">
+        <form action="processar_cliente.php" class="bg-white shadow-md rounded px-10 pt-8 pb-6 mb-32" method="POST">
 
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm mb-2" for="nome">
-                        Nome:
-                    </label>
-                    <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome" type="text" name="nome" required>
-                </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="nome">
+                    <i class="fas fa-user"></i> Nome:
+                </label>
+                <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome" type="text" name="nome" required>
+            </div>
 
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm mb-2" for="cidade">
-                        Cidade:
-                    </label>
-                    <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cidade" type="text" name="cidade" required>
-                </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="cidade">
+                    <i class="fas fa-city"></i> Cidade:
+                </label>
+                <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cidade" type="text" name="cidade" required>
+            </div>
 
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm mb-2" for="telefone">
-                        Telefone:
-                    </label>
-                    <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="telefone" type="text" name="telefone" required oninput="formatarTelefone(this)">
-                </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="telefone">
+                    <i class="fas fa-phone"></i> Telefone:
+                </label>
+                <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="telefone" type="text" name="telefone" required oninput="formatarTelefone(this)">
+            </div>
 
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm mb-2" for="email">
-                        Email:
-                    </label>
-                    <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" name="email" required>
-                </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="email">
+                    <i class="fas fa-envelope"></i> Email:
+                </label>
+                <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" name="email" required>
+            </div>
 
-                <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                    Salvar
-                </button>
-            </form>
-        </div>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                <i class="fas fa-plus-circle"></i> Salvar
+            </button>
+        </form>
+    </div>
+</div>
+
 
         <script>
             function formatarTelefone(input) {
@@ -112,11 +114,7 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
     </div>
 
 
-    <footer class="fixed bottom-0 left-0 right-0 bg-white p-4 text-center">
-  <p class="text-gray-500 text-sm font-bold">
-    <i class="fas fa-hotel text-blue-500"></i> Hotel Blue Ocean - Todos os direitos reservados.
-  </p>
-</footer>
+  
 
     <script>
         document.getElementById('menu-toggle').addEventListener('click', function() {

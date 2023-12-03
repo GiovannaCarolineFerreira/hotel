@@ -50,46 +50,42 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
         </button>
     </div>
 </nav>
-    <div class="flex items-center justify-center flex-col h-screen">
-        <h1 class="mb-6 text-3xl font-bold">Adicionar Funcionário:</h1>
-        <div class="w-full max-w-md">
-            <form action="processar_funcionario.php" class="bg-white shadow-md rounded px-10 pt-8 pb-6 mb-32" method="POST">
+<div class="flex items-center justify-center flex-col h-screen">
+    <h1 class="mb-6 text-3xl font-bold"><i class="fas fa-users  mr-4"> </i>Adicionar Funcionário:</h1>
+    <div class="w-full max-w-md">
+        <form action="processar_funcionario.php" class="bg-white shadow-md rounded px-10 pt-8 pb-6 mb-32" method="POST">
 
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm mb-2" for="nome_completo">
-                        Nome Completo:
-                    </label>
-                    <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome_completo" type="text" name="nome_completo" required>
-                </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="nome_completo">
+                    <i class="fas fa-user"></i> Nome Completo:
+                </label>
+                <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome_completo" type="text" name="nome_completo" required>
+            </div>
 
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm mb-2" for="login">
-                        Login:
-                    </label>
-                    <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="login" type="text" name="login" required>
-                </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="login">
+                    <i class="fas fa-sign-in-alt"></i> Login:
+                </label>
+                <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="login" type="text" name="login" required>
+            </div>
 
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm mb-2" for="senha">
-                        Senha:
-                    </label>
-                    <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="senha" type="password" name="senha" required>
-                </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="senha">
+                    <i class="fas fa-lock"></i> Senha:
+                </label>
+                <input class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="senha" type="password" name="senha" required>
+            </div>
 
-                <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                    Salvar
-                </button>
-            </form>
-        </div>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                <i class="fas fa-plus-circle"></i> Salvar
+            </button>
+        </form>
     </div>
+</div>
 
 
-    <footer class="fixed bottom-0 left-0 right-0 bg-white p-4 text-center">
-  <p class="text-gray-500 text-sm font-bold">
-    <i class="fas fa-hotel text-blue-500"></i> Hotel Blue Ocean - Todos os direitos reservados.
-  </p>
-</footer>
 
+ 
     <script>
         document.getElementById('menu-toggle').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');

@@ -50,61 +50,58 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
     </div>
 </nav>
 
-    <div class="content mt-24 shadow-lg">
-        <h2 class="text-2xl font-bold mb-4">Clientes:</h2>
-        <div class="overflow-x-auto mx-auto">
-            <table class="min-w-full bg-white border border-gray-300">
-                <thead>
-                    <tr>
-                        <th class="py-2 px-4 border-b">ID</th>
-                        <th class="py-2 px-4 border-b">Nome</th>
-                        <th class="py-2 px-4 border-b">Cidade</th>
-                        <th class="py-2 px-4 border-b">Telefone</th>
-                        <th class="py-2 px-4 border-b">Email</th>
-                        <th class="py-2 px-4 border-b">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    include("db.php");
+<div class="content mt-24 shadow-lg">
+    <h2 class="text-2xl font-bold mb-4">Clientes:</h2>
+    <div class="overflow-x-auto mx-auto">
+        <table class="min-w-full bg-white border border-gray-300">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4 border-b">ID</th>
+                    <th class="py-2 px-4 border-b">Nome</th>
+                    <th class="py-2 px-4 border-b">Cidade</th>
+                    <th class="py-2 px-4 border-b">Telefone</th>
+                    <th class="py-2 px-4 border-b">Email</th>
+                    <th class="py-2 px-4 border-b">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                include("db.php");
 
-                    $query = "SELECT * FROM cliente";
-                    $result = mysqli_query($conn, $query);
+                $query = "SELECT * FROM cliente";
+                $result = mysqli_query($conn, $query);
 
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr>";
-                            echo "<td class='py-2 px-4 border-b'>" . $row["id"] . "</td>";
-                            echo "<td class='py-2 px-4 border-b'>" . $row["nome"] . "</td>";
-                            echo "<td class='py-2 px-4 border-b'>" . $row["cidade"] . "</td>";
-                            echo "<td class='py-2 px-4 border-b'>" . $row["telefone"] . "</td>";
-                            echo "<td class='py-2 px-4 border-b'>" . $row["email"] . "</td>";
-                            echo "<td class='py-2 px-4 border-b'>
-                                <a href='alterar_cliente.php?id=" . $row["id"] . "' class='text-blue-500 mr-2'>Alterar</a>
-                                <a href='excluir_cliente.php?id=" . $row["id"] . "' class='text-red-500'>Excluir</a>
-                            </td>";
-                            echo "</tr>";
-                        }
-                    } else {
-                        echo "<tr><td colspan='6' class='py-2 px-4 border-b'>Nenhum cliente foi encontrado.</td></tr>";
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td class='py-2 px-4 border-b'>" . $row["id"] . "</td>";
+                        echo "<td class='py-2 px-4 border-b'>" . $row["nome"] . "</td>";
+                        echo "<td class='py-2 px-4 border-b'>" . $row["cidade"] . "</td>";
+                        echo "<td class='py-2 px-4 border-b'>" . $row["telefone"] . "</td>";
+                        echo "<td class='py-2 px-4 border-b'>" . $row["email"] . "</td>";
+                        echo "<td class='py-2 px-4 border-b'>
+                            <a href='alterar_cliente.php?id=" . $row["id"] . "' class='text-blue-500 mr-2'><i class='fas fa-edit'></i> Alterar</a>
+                            <a href='excluir_cliente.php?id=" . $row["id"] . "' class='text-red-500'><i class='fas fa-trash-alt'></i> Excluir</a>
+                        </td>";
+                        echo "</tr>";
                     }
-                    mysqli_close($conn);
-                    ?>
-                    <tr>
-                        <td colspan='6' class='py-2 px-4 border-b'>
-                            <a href='adicionar_cliente.php' class='text-green-500'>Adicionar Cliente</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                } else {
+                    echo "<tr><td colspan='6' class='py-2 px-4 border-b'>Nenhum cliente foi encontrado.</td></tr>";
+                }
+                mysqli_close($conn);
+                ?>
+                <tr>
+                    <td colspan='6' class='py-2 px-4 border-b'>
+                        <a href='adicionar_cliente.php' class='text-green-500'><i class='fas fa-plus'></i> Adicionar Cliente</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
 
-    <footer class="fixed bottom-0 left-0 right-0 bg-white p-4 text-center">
-  <p class="text-gray-500 text-sm font-bold">
-    <i class="fas fa-hotel text-blue-500"></i> Hotel Blue Ocean - Todos os direitos reservados.
-  </p>
-</footer>
+
+
 
     <script>
         document.getElementById('menu-toggle').addEventListener('click', function() {
