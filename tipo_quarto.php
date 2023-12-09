@@ -77,7 +77,7 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
                         echo "<td class='py-2 px-4 border-b'>" . $row["codigo"] . "</td>";
                         echo "<td class='py-2 px-4 border-b'>
                                 <a href='alterar_tipo_quarto.php?id=" . $row["id"] . "' class='text-blue-500 mr-2'><i class='fas fa-edit'></i> Alterar</a>
-                                <a href='excluir_tipo_quarto.php?id=" . $row["id"] . "' class='text-red-500'><i class='fas fa-trash'></i> Excluir</a>
+                                <a href='excluir_tipo_quarto.php?id=" . $row["id"] . "' class='text-red-500'><i class='fas fa-trash-alt'></i> Excluir</a>
                               </td>";
                         echo "</tr>";
                     }

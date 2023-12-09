@@ -89,7 +89,7 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
                                 echo "<td>$" . number_format($row["preco_quarto"], 2) . "</td>"; // Adicionando o símbolo $ e formatando o preço
                                 echo "<td>
                 <a href='alterar_reserva.php?id=" . $row["id"] . "' class='text-blue-500 flex flex-row items-center'><i class='fas fa-edit'></i> Alterar</a>
-                <a href='excluir_reserva.php?id=" . $row["id"] . "' class='text-red-500 flex flex-row items-center'><i class='fas fa-trash'></i> Excluir</a>
+                <a href='excluir_reserva.php?id=" . $row["id"] . "' class='text-red-500 flex flex-row items-center'><i class='fas fa-trash-alt'></i> Excluir</a>
                                  </td>";
                                 echo "</tr>";
                             }

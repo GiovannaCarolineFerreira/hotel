@@ -60,7 +60,7 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
                     <th class="py-2 px-4 border-b">Número</th>
                     <th class="py-2 px-4 border-b">Nome</th>
                     <th class="py-2 px-4 border-b">Preço (diária)</th>
-                    <th class="py-2 px-4 border-b">Ações</th>
+                    <th class="py-2 px-4 border-b mr-8">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -78,7 +78,7 @@ background: linear-gradient(90deg, rgba(228,233,241,1) 35%, rgba(231,234,236,1) 
                         echo "<td class='py-2 px-4 border-b'>$" . number_format($row["preco"], 2) . "</td>";
                         echo "<td class='py-2 px-4 border-b'>
                                 <a href='alterar_quarto.php?numero=" . $row["numero"] . "' class='text-blue-500 mr-2'><i class='fas fa-edit'></i> Alterar</a>
-                                <a href='excluir_quarto.php?numero=" . $row["numero"] . "' class='text-red-500'><i class='fas fa-trash'></i> Excluir</a>
+                                <a href='excluir_quarto.php?numero=" . $row["numero"] . "' class='text-red-500'><i class='fas fa-trash-alt'></i> Excluir</a>
                               </td>";
                         echo "</tr>";
                     }
